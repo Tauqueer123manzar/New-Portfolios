@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import resumePDF from '../assets/Tauqueer Mern Resume.pdf';
 import photo from '../assets/TAj pic.jpg';
+import Footer from '../components/Footer';
 const Home = () => {
   const handleDownload = () => {
     const link = document.createElement('a');
@@ -13,7 +14,8 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+    <>
+    <div className="h-screen">
       <main className="container mx-auto px-4 pt-24 pb-12">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Image Section */}
@@ -27,7 +29,7 @@ const Home = () => {
               <img
                 src={photo}
                 alt="Profile"
-                className="w-full  object-cover"
+                className="w-full object-cover"
               />
               <div className="absolute inset-0 bg-indigo-500 opacity-10"></div>
             </div>
@@ -81,6 +83,7 @@ const Home = () => {
         </div>
       </main>
     </div>
+    </>
   );
 };
 
